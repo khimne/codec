@@ -34,17 +34,11 @@ void xuat (int *a, int n)
 
 void tong(int *a1, int *a2, int *a_sum, int n1, int n2,int *k)
 {
-   int i;
-    if(n1!=n2)
-    {
          *k=n1<n2?n2:n1;
             for (int i=0; i<=*k; i++)
             {
                 a_sum[i]=a1[i]+a2[i];
             }
-    }
-    else
-        a_sum[i]=a1[i]+a2[i];
 }
 
 int giaTriDaThuc (int a[], int n, int x)
