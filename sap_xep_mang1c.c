@@ -1,43 +1,48 @@
-#include <stdio.h>
-#include <math.h>
-#define MAX 100
+/* Sắp xếp chèn : Di chuyển các phần tử có giá trị lớn hơn
+giá trị key về sau một vị trí so với vị trí ban đầu của nó
+*/
 
-void nhapmang (int arr[], int n)
+#include<stdio.h>
+#define MAX 100
+void nhap(int a[],int n)
 {
-    for (int i=0; i<n;i++)
-        scanf("%d",&arr[i]);
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
 }
-void xuatmang (int arr[], int n)
+void xuat(int a[],int n)
 {
-    for (int i=0; i<n;i++)
-        printf("%5d",arr[i]);
-        printf("\n");
+    for(int i=0;i<n;i++)
+    {
+        printf("%4d",a[i]);
+    }
+    printf("\n");
 }
-//Insertion Sort
-void insertionSort(int arr[], int n)
+void sapxep(int a[],int n)
 {
-    int i, k, j;
-    for (i = 1; i < n; i++)
-   {
-       k = arr[i];
-       j = i-1;
-       while (j >= 0 && arr[j] > k)
-       {
-           arr[j+1] = arr[j];
-           j = j-1;
-       }
-       arr[j+1] = k;
-   }
+    int i,j,k;
+    for(i=1;i<n;i++)
+    {
+        k=a[i];
+        j=i-1;
+        while(j>=0 && a[j]>k)
+        {
+            a[j+1]=a[j];
+            j=j-1;
+        }
+        a[j+1]=k;
+    }
 }
 int main()
 {
     int n=0;  scanf("%d",&n);
-    int arr[MAX];
-    nhapmang(arr,n);
-    xuatmang(arr,n);
-    insertionSort(arr,n);
+    int a[MAX];
+    nhap(a,n);
+    xuat(a,n);
+    sapxep(a,n);
     // printf("Day so da sap xep: \n");
-    xuatmang(arr, n);
+    xuat(a,n);
 
     return 0;
 }
