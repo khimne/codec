@@ -22,7 +22,7 @@ int main()
        if(denta>0)
             printf("pt co 2 nghiem phan biet x1= %0.2f , x2= %0.2f",(-b+sqrt(denta))/(2*a),(-b-sqrt(denta))/(2*a));
        if(denta==0)
-            printf("pt co nghiem kep x=",-b/2*a);
+            printf("pt co nghiem kep x1=x2= %0.2f",-b/2*a);
        if(denta<0)
             printf("pt vo nghiem");
    }
